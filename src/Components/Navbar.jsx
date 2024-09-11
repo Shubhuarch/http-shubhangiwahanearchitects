@@ -36,37 +36,37 @@ const Navbar = () => {
   const menuRef = useOutsideClick(handleClickOutside);
 
   return (
-    <div className="h-[22vh] w-full bg-slate-200">
-      <div className="h-[2vh]">Reach Us @ yourmail@gmail.com</div>
+    <div className="h-[20vh] md:h-[22vh] w-full bg-slate-200">
+      <div className="text-[0.7rem] pt-1 mb-1 md:h-[2vh]">Reach Us @ yourmail@gmail.com</div>
       <div className="flex justify-between w-full">
-        <div className="flex h-[20vh]">
+        <div className="flex h-[17vh] md:h-[20vh]">
           <div className="h-full pl-4">
             <img src={logo} alt="Logo" className="h-full w-full" />
           </div>
         </div>
 
-        <div className="flex w-max items-center h-[5vh] pr-10">
+        <div className="flex w-max items-center h-[5vh] ">
           <Link
             to="/"
-            className="text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
+            className="hidden md:block text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
+            className="hidden md:block text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
           >
             About Us
           </Link>
           <Link
             to="/contact"
-            className="text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
+            className="hidden md:block text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
           >
             Contact Us
           </Link>
 
           <div ref={menuRef} className="relative">
-            <button onClick={toggleMenu} className="p-2">
+            <button onClick={toggleMenu} className="p-2 text-[2rem]">
               <GiLadder />
             </button>
             {isMenuOpen && (
