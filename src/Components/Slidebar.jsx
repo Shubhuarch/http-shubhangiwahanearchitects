@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import img1 from "../assets/1.png";
 import img2 from "../assets/2.png";
 import img3 from "../assets/3.png";
-
+import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -91,9 +91,18 @@ const Slidebar = () => {
               <p>Help you</p>
               <p>To build a better future</p>
             </div>
-            <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+         
+              <Link  to="/contact" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
               Contact Us
-            </button>
+              </Link>
+              {/* <Link
+                  to="/contact"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  // onClick={toggleMenu}
+                >
+                  Contact Us
+                </Link> */}
+           
           </div>
 
           <div className="flex flex-col items-center justify-center h-[80%] bg-black bg-opacity-50 p-2">

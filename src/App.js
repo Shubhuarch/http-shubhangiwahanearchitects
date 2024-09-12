@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Components/Navbar';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Chat from './Components/Chat';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Chat/>
     </div>
   </Router>
   );
