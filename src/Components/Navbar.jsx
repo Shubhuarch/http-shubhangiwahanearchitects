@@ -14,10 +14,10 @@ const useOutsideClick = (callback) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClick);
+    document.addEventListener("mousedown", handleClick);
 
     return () => {
-      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener("mousedown", handleClick);
     };
   }, [callback]);
 
@@ -36,8 +36,11 @@ const Navbar = () => {
   const menuRef = useOutsideClick(handleClickOutside);
 
   return (
-    <div className="h-[20vh] md:h-[22vh] w-full bg-slate-200">
-      <div className="text-[0.7rem] pt-1 mb-1 md:h-[2vh]">Reach Us @ yourmail@gmail.com</div>
+    <div className="h-[24vh] md:h-[22vh] w-full bg-slate-200">
+      <div className="text-[0.7rem] md:text-[1rem] pt-2 mb-1 md:h-[2vh]">
+        <div>Reach Us @ yourmail@gmail.com</div>
+        <div>Call Us +91 0000000000</div>
+      </div>
       <div className="flex justify-between w-full">
         <div className="flex h-[17vh] md:h-[20vh]">
           <div className="h-full pl-4">
@@ -70,22 +73,97 @@ const Navbar = () => {
               <GiLadder />
             </button>
             {isMenuOpen && (
-              <div className="absolute right-0 mt-2 w-[40vh] pr-0 bg-white rounded-md shadow-lg py-1 z-10">
-                <Link to="/link1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 1</Link>
-                <Link to="/link2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 2</Link>
-                <Link to="/link3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 3</Link>
-                <Link to="/link1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 1</Link>
-                <Link to="/link2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 2</Link>
-                <Link to="/link3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 3</Link>
-                <Link to="/link1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 1</Link>
-                <Link to="/link2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 2</Link>
-                <Link to="/link3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 3</Link>
-                <Link to="/link1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 1</Link>
-                <Link to="/link2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 2</Link>
-                <Link to="/link3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 3</Link>
-                <Link to="/link1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 1</Link>
-                <Link to="/link2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 2</Link>
-                <Link to="/link3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Link 3</Link>
+              <div className="absolute right-0 mt-2 w-[40vh] h-screen pr-0 bg-gray-500 rounded-md shadow-lg py-1 z-10">
+                <Link
+                  to="/link1"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 1
+                </Link>
+                <Link
+                  to="/link2"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 2
+                </Link>
+                <Link
+                  to="/link3"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 3
+                </Link>
+                <Link
+                  to="/link1"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 1
+                </Link>
+                <Link
+                  to="/link2"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 2
+                </Link>
+                <Link
+                  to="/link3"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 3
+                </Link>
+                <Link
+                  to="/link1"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 1
+                </Link>
+                <Link
+                  to="/link2"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 2
+                </Link>
+                <Link
+                  to="/link3"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 3
+                </Link>
+                <Link
+                  to="/link1"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 1
+                </Link>
+                <Link
+                  to="/link2"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 2
+                </Link>
+                <Link
+                  to="/link3"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 3
+                </Link>
+                <Link
+                  to="/link1"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 1
+                </Link>
+                <Link
+                  to="/link2"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 2
+                </Link>
+                <Link
+                  to="/link3"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Link 3
+                </Link>
               </div>
             )}
           </div>
