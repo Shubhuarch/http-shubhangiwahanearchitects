@@ -23,7 +23,7 @@ const Slidebar = () => {
 
   return (
     <div
-      className="relative w-full h-[30vh] md:h-[80vh] overflow-hidden group"
+      className="relative w-full h-[30vh] md:h-[60vh] overflow-hidden group border "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
