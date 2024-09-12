@@ -36,7 +36,6 @@ const Navbar = () => {
   const menuRef = useOutsideClick(handleClickOutside);
 
   return (
-   
     <div className="h-[24vh] md:h-[22vh] w-full bg-slate-200 fixed z-50 top-0 left-0">
       <div className="text-[0.7rem] md:text-[1rem] pt-2 mb-1 md:h-[2vh]">
         <div>Reach Us @ yourmail@gmail.com</div>
@@ -44,10 +43,10 @@ const Navbar = () => {
       </div>
       <div className="flex justify-between w-full">
         <div className="flex h-[17vh] md:h-[20vh]">
-          <Link to='/'>
-          <div className="h-full pl-4">
-            <img src={logo} alt="Logo" className="h-full w-full" />
-          </div>
+          <Link to="/">
+            <div className="h-full pl-4">
+              <img src={logo} alt="Logo" className="h-full w-full" />
+            </div>
           </Link>
         </div>
 
@@ -174,7 +173,6 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
