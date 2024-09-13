@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import Slidebar from '../Components/Slidebar'
-
+import DataPage from './DataPage';
+import { data } from '../Utils/boxPhoto';
+import HowItWorks from './HowItWorks';
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -12,12 +14,14 @@ const Home = () => {
   return (
     <div className='bg-[#ebeae6]'>
       <Slidebar />
-      <button 
+      <DataPage />
+      <HowItWorks />
+      {/* <button 
         className='bg-gray-400 p-4 rounded-lg mt-2'
         onClick={toggleModal}
       >
         Book Whatever You want
-      </button>
+      </button> */}
       
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
