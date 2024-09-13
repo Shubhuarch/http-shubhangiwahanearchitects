@@ -36,7 +36,7 @@ const Navbar = () => {
   const menuRef = useOutsideClick(handleClickOutside);
 
   return (
-    <div className="h-[24vh] md:h-[22vh] w-full bg-[#c6afa7] fixed z-50 top-0 left-0">
+    <div className="h-[24vh] md:h-[22vh] w-full bg-[#ebeae6] fixed z-50 top-0 left-0">
       <div className="text-[0.7rem] md:text-[1rem] pt-2 mb-1 md:h-[2vh]">
         <div>Reach Us @ yourmail@gmail.com</div>
         <div>Call Us +91 0000000000</div>

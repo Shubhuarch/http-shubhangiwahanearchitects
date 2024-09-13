@@ -10,7 +10,7 @@ const Home = () => {
   };
 
   return (
-    <div className='bg-[#c6afa7]'>
+    <div className='bg-[#ebeae6]'>
       <Slidebar />
       <button 
         className='bg-gray-400 p-4 rounded-lg mt-2'
