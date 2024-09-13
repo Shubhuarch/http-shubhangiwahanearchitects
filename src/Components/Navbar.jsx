@@ -6,7 +6,7 @@ import { GiLadder } from "react-icons/gi";
 // Custom hook to handle clicks outside of the specified element
 const useOutsideClick = (callback) => {
   const ref = useRef();
-
+  
   useEffect(() => {
     const handleClick = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {
@@ -36,41 +36,70 @@ const Navbar = () => {
   const menuRef = useOutsideClick(handleClickOutside);
 
   return (
-    <div className="h-[24vh] md:h-[22vh] w-full bg-slate-200 fixed z-50 top-0 left-0">
-      <div className="text-[0.7rem] md:text-[1rem] pt-2 mb-1 md:h-[2vh]">
+    <div className="h-[12vh] md:h-[15vh]  bg-opacity-40 w-full  fixed z-50 top-0 left-0 bg-[#ebeae6]">
+      {/* <div className="text-[0.7rem] md:text-[1rem] pt-2 mb-1 md:h-[2vh]">
         <div>Reach Us @ yourmail@gmail.com</div>
         <div>Call Us +91 0000000000</div>
-      </div>
-      <div className="flex justify-between w-full">
-        <div className="flex h-[17vh] md:h-[20vh]">
-          <Link to="/">
-            <div className="h-full pl-4">
-              <img src={logo} alt="Logo" className="h-full w-full" />
-            </div>
-          </Link>
+      </div> */}
+      <div className="flex h-full justify-between items-center w-full">
+        
+        <div>
+          <div className="flex h-full md:h-[12vh]">
+            <Link to="/">
+              <div className="h-[12vh] mt-[0vh] pl-4">
+                <img src={logo} alt="Logo" className="h-full w-full" />
+              </div>
+            </Link>
+          </div>
+          <div></div>
         </div>
 
-        <div className="flex w-max items-center h-[5vh] ">
+        <div className="flex w-max items-center text-[#584039] h-[5vh] pr-2">
           <Link
             to="/"
-            className="hidden md:block text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
+            className="hidden md:block text-lg font-semibold  hover:text-[#C89A74] p-2 m-2"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="hidden md:block text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
+            className="hidden md:block text-lg font-semibold  hover:text-[#C89A74] p-2 m-2"
           >
-            About Us
+            Architecture
           </Link>
           <Link
             to="/contact"
-            className="hidden md:block text-lg font-semibold text-gray-800 hover:text-blue-600 p-2 m-2"
+            className="hidden md:block text-lg font-semibold  hover:text-[#C89A74] p-2 m-2"
+          >
+            Interior Design
+          </Link>
+          <Link
+            to="/"
+            className="hidden md:block text-lg font-semibold  hover:text-[#C89A74] p-2 m-2"
+          >
+            Projects
+          </Link>
+          <Link
+            to="/about"
+            className="hidden md:block text-lg font-semibold  hover:text-[#C89A74] p-2 m-2"
+          >
+            AI Corner
+          </Link>
+          <Link
+            to="/contact"
+            className="hidden md:block text-lg font-semibold  hover:text-[#C89A74] p-2 m-2"
           >
             Contact Us
           </Link>
 
-          <div ref={menuRef} className="relative">
+          <Link
+            to="/contact"
+            className="hidden md:block text-lg font-semibold border border-[#584039]  hover:text-[#C89A74] p-2 m-2 rounded-lg"
+          >
+            Book a Consultation
+          </Link>
+
+          {/* <div ref={menuRef} className="relative">
             <button onClick={toggleMenu} className="p-2 text-[2rem]">
               <GiLadder />
             </button>
@@ -169,7 +198,7 @@ const Navbar = () => {
                 </Link>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
