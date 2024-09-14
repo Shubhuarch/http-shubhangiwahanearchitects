@@ -41,7 +41,7 @@ const Navbar = () => {
         <div>Reach Us @ yourmail@gmail.com</div>
         <div>Call Us +91 0000000000</div>
       </div> */}
-      <div className="flex h-full justify-between items-center w-full">
+      <div className="flex h-full justify-center md:justify-between items-center w-full">
         <div>
           <div className="flex h-full md:h-[12vh]">
             <Link to="/">

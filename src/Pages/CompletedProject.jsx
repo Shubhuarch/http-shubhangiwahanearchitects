@@ -82,7 +82,7 @@ const CompletedProject = () => {
               <img
                 src={img}
                 alt={`Slide ${index}`}
-                className="w-full h-[15vh] md:h-[300px] object-cover"
+                className="w-full h-[20vh] md:h-[300px] "
               />
             </div>
           ))}

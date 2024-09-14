@@ -15,7 +15,7 @@ const DataPage = () => {
 
       <div className="hidden md:flex flex-wrap justify-evenly  mt-[6vh] w-full ">
         {data.map((info, i) => (
-          <div className="hidden md:flex flex-col w-[22%] md:w-[20%] mt-2 ">
+          <div className="hidden md:flex flex-col w-[25%] md:w-[18%] mt-2 ">
             <div className="w-[full] h-[10vh] md:h-[30vh] bg-red-300 m-2">
               <img src={info.img} className="h-full w-full" />
             </div>
@@ -29,16 +29,17 @@ const DataPage = () => {
         ))}
       </div>
 
-      <div className="md:hidden flex flex-wrap justify-evenly mt-[6vh] w-full">
+{/* mobile view */}
+      <div className="md:hidden flex  flex-wrap justify-evenly mt-[6vh] w-full">
         {data.map((info, i) => (
           <div
-            className={`flex m-2 w-full ${i % 2 !== 0 ? "flex-row-reverse" : ""}`}
+            className={`flex flex-col items-center m-2 w-full `}
             key={i}
           >
-            <div className="w-[45%] h-[20vh] md:h-[30vh] m-2">
+            <div className="w-full p-2 h-[50vh] md:h-[30vh] m-2">
               <img src={info.img} className='w-full h-full object-cover drop-shadow-2xl' alt={info.title} />
             </div>
-            <div className="w-[45%] flex flex-col items-center justify-center">
+            <div className="w-full flex flex-col items-center justify-center">
               <div className="mt-4 text-[0.7rem] text-[#584039] md:text-[0.7rem]">
                 {info.title}
               </div>
