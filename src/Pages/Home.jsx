@@ -17,8 +17,8 @@ const Home = () => {
       <Slidebar />
 
       <DataPage />
-      <HowItWorks /> 
       <CompletedProject />
+      <HowItWorks /> 
       <div className='h-[20vh]'>
 
       </div>
