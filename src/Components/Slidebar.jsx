@@ -124,7 +124,7 @@ const Slidebar = () => {
                 </Link> */}
           </div>
 
-          <div className="flex flex-col items-center justify-center h-[80%] bg-black bg-opacity-50 p-2">
+          <div className="flex flex-col items-center justify-center h-[80%] p-2">
             <div className="flex flex-col justify-evenly h-[80%] items-center text-[0.8rem] ">
             <a
                 href="https://www.instagram.com/shubhangiwahanearchitects/"
