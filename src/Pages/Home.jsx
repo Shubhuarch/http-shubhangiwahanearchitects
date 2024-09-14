@@ -4,6 +4,7 @@ import Slidebar from '../Components/Slidebar'
 import DataPage from './DataPage';
 import { data } from '../Utils/boxPhoto';
 import HowItWorks from './HowItWorks';
+import CompletedProject from './CompletedProject';
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -17,6 +18,10 @@ const Home = () => {
 
       <DataPage />
       <HowItWorks /> 
+      <CompletedProject />
+      <div className='h-[20vh]'>
+
+      </div>
       {/* <button 
         className='bg-gray-400 p-4 rounded-lg mt-2'
         onClick={toggleModal}
