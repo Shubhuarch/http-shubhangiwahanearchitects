@@ -27,7 +27,7 @@ function App() {
       />
     <div className="App">
       <Navbar />
-      <div className="mt-[15vh]"> {/* Add padding top here */}
+      <div className="mt-[15vh] w-full"> 
         <Routes>
           <Route path="/*" element={<Home />} />
           <Route path="/about" element={<About />} />

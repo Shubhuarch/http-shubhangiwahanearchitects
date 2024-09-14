@@ -5,9 +5,9 @@ const HowItWorks = () => {
     <div className='mt-[8vh] bg-[#ebeae6] flex flex-col items-center'>
         <div className='text-[#584039] text-[2rem] font-cormorant'>Our Process</div>
 
-        <div  className="flex w-[100%] justify-center mt-[4vh]">
+        <div  className=" flex flex-col md:flex-row  w-[100%] justify-center mt-[4vh]">
         {howWork.map((info,i)=>(
-            <div key={i} className="text-center flex flex-col items-center w-[20%] m-2">
+            <div key={i} className="text-center flex flex-col items-center w-full md:w-[20%] m-2">
                 <div className='w-[30%] h-[12vh]  '>
                     <img src={info.loggo} className='h-full w-full' alt="" />
                 </div>
