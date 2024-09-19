@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import Modal from 'react-modal';
 import Home from './Pages/Home';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -27,7 +27,7 @@ function App() {
       />
     <div className="App">
       <Navbar />
-      <div className="mt-[15vh]"> {/* Add padding top here */}
+      <div className="mt-[15vh] w-full"> 
         <Routes>
           <Route path="/*" element={<Home />} />
           <Route path="/about" element={<About />} />

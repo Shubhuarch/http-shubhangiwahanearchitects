@@ -37,7 +37,7 @@ const Slidebar = () => {
               : index < currentIndex
               ? "-translate-x-full"
               : "translate-x-full"
-          } ${isHovered ? "blur-sm" : ""}`}
+          } ${isHovered ? "" : ""}`}
           style={{
             zIndex: index === currentIndex ? 10 : 0,
           }}
@@ -66,63 +66,93 @@ const Slidebar = () => {
 
           <div className="flex flex-col items-center ml-auto justify-center h-[80%] w-[6vh] p-10 ">
             <div className="flex flex-col justify-evenly h-[50%] items-center text-[1.7rem] w-full ">
-              <a href="https://www.instagram.com/shubhangiwahanearchitects/" className="hover:text-[#584039]" target="_blank">
+              <a
+                href="https://www.instagram.com/shubhangiwahanearchitects/"
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
                 <FaInstagram />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61559404326535" className="hover:text-[#584039]"  target="_blank">
-
+              <a
+                href="https://www.facebook.com/profile.php?id=61559404326535"
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
                 <CiFacebook />
               </a>
-              <a href="https://www.linkedin.com/in/shubhangi-wahane/" className="hover:text-[#584039]" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/shubhangi-wahane/"
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="https://wa.me/+917738700860?text=Hi I want to book a Consultation " className="hover:text-[#584039]" target="_blank">
-              <FaWhatsapp />
-
+              <a
+                href="https://wa.me/+917738700860?text=Hi I want to book a Consultation "
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
+                <FaWhatsapp />
               </a>
               {/* <a href=""></a>
             <a href=""></a> */}
             </div>
           </div>
         </div>
-
-{/* phone screen */}
-        <div className="md:hidden flex text-white items-center w-full h-full justify-between">
-          <div className="flex flex-col items-center space-y-4 bg-[#584039]  p-6 h-fit rounded-lg text-[0.5rem]">
-            {/* <p className=" font-bold">WELCOME TO COMPANY NAME</p> */}
+      </div>
+      {/* phone screen */}
+      <div className=" absolute  inset-0 md:flex flex w-full h-full justify-end items-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="md:hidden flex justify-between w-[75%] h-full p-4 text-white items-center ">
+          <div className="flex flex-col items-center space-y-4 bg-[#998975] bg-opacity-50 p-6 h-fit rounded-lg text-[0.5rem]">
+            <p className=" font-bold">WELCOME TO COMPANY NAME</p>
             <p className="">The Studio of Enthusiasm</p>
             <div className="text-center">
               <p>We at Company Name</p>
               <p>Help you</p>
               <p>To build a better future</p>
             </div>
-         
-              <Link  to="/contact" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+
+            <button className="mt-4 px-6 py-2 bg-[#c0ad95] hover:bg-[#b4a188] text-white rounded-full  transition-colors duration-300">
               Contact Us
-              </Link>
-              {/* <Link
+            </button>
+            {/* <Link
                   to="/contact"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   // onClick={toggleMenu}
                 >
                   Contact Us
                 </Link> */}
-           
           </div>
 
-          <div className="flex flex-col items-center justify-center h-[80%] bg-black bg-opacity-50 p-2">
+          <div className="flex flex-col items-center justify-center h-[80%] p-2">
             <div className="flex flex-col justify-evenly h-[80%] items-center text-[0.8rem] ">
-              <a href="">
+            <a
+                href="https://www.instagram.com/shubhangiwahanearchitects/"
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
                 <FaInstagram />
               </a>
-              <a href="">
+              <a
+                href="https://www.facebook.com/profile.php?id=61559404326535"
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
                 <CiFacebook />
               </a>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/shubhangi-wahane/"
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="">
-                <FaXTwitter />
+              <a
+                href="https://wa.me/+917738700860?text=Hi I want to book a Consultation "
+                className="hover:text-[#584039]"
+                target="_blank"
+              >
+                <FaWhatsapp />
               </a>
               {/* <a href=""></a>
             <a href=""></a> */}
