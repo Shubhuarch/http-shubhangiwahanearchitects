@@ -29,6 +29,11 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   const handleClickOutside = () => {
     if (isMenuOpen) setIsMenuOpen(false);
   };
@@ -62,7 +67,7 @@ const Navbar = () => {
               Home
             </Link>
             {/* Dropdown that appears on hover */}
-            <div className="hidden absolute top-24 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
+            <div className="hidden absolute top-16 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
               <Link
                 to="/link2"
                 className=" px-4 py-2 w-full flex text-sm text-gray-700 hover:bg-gray-100"
@@ -86,7 +91,7 @@ const Navbar = () => {
               Architecture
             </Link>
             {/* Dropdown that appears on hover */}
-            <div className="hidden absolute top-24 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
+            <div className="hidden absolute top-16 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
               <Link
                 to="/link2"
                 className=" px-4 py-2 w-full flex text-sm text-gray-700 hover:bg-gray-100"
@@ -107,10 +112,10 @@ const Navbar = () => {
               to="/"
               className="hidden md:block text-lg font-semibold hover:text-[#C89A74] p-2 m-2 group"
             >
-               Interior Design
+              Interior Design
             </Link>
             {/* Dropdown that appears on hover */}
-            <div className="hidden absolute top-24 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
+            <div className="hidden absolute top-16 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
               <Link
                 to="/link2"
                 className=" px-4 py-2 w-full flex text-sm text-gray-700 hover:bg-gray-100"
@@ -126,15 +131,15 @@ const Navbar = () => {
             </div>
           </div>
 
-           <div className="group">
+          <div className="group">
             <Link
               to="/"
               className="hidden md:block text-lg font-semibold hover:text-[#C89A74] p-2 m-2 group"
             >
-                Interior Design
+              Interior Design
             </Link>
             {/* Dropdown that appears on hover */}
-            <div className="hidden absolute top-24 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
+            <div className="hidden absolute top-16 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
               <Link
                 to="/link2"
                 className=" px-4 py-2 w-full flex text-sm text-gray-700 hover:bg-gray-100"
@@ -150,15 +155,15 @@ const Navbar = () => {
             </div>
           </div>
 
-           <div className="group">
+          <div className="group">
             <Link
               to="/"
               className="hidden md:block text-lg font-semibold hover:text-[#C89A74] p-2 m-2 group"
             >
-                AI Corner
+              AI Corner
             </Link>
             {/* Dropdown that appears on hover */}
-            <div className="hidden absolute top-24 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
+            <div className="hidden absolute top-16 w-[25vh] flex-col ml-4 items-start bg-white group-hover:flex ">
               <Link
                 to="/link2"
                 className=" px-4 py-2 w-full flex text-sm text-gray-700 hover:bg-gray-100"
@@ -180,12 +185,12 @@ const Navbar = () => {
             Contact Us
           </Link>
 
-          <Link
-            to="/contact"
+          <button
+            onClick={toggleModal}
             className="hidden md:block text-lg font-semibold border border-[#584039]  hover:text-[#C89A74] p-2 m-2 rounded-lg"
           >
             Book a Consultation
-          </Link>
+          </button>
 
           <div ref={menuRef} className="hidden relative">
             <button onClick={toggleMenu} className="p-2 text-[2rem]">
@@ -287,6 +292,26 @@ const Navbar = () => {
               </div>
             )}
           </div>
+        </div>
+        <div>
+          {isModalOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+              <div className="bg-white p-4 rounded-lg w-3/4 h-3/4 relative">
+                <button
+                  className="absolute top-2 right-2 text-xl font-bold"
+                  onClick={toggleModal}
+                >
+                  &times;
+                </button>
+                <iframe
+                  src="https://calendly.com/shubhangiwahane/free-vastu-consultation-call"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                ></iframe>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
